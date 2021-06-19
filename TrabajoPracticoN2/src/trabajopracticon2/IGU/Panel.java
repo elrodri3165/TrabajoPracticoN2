@@ -53,6 +53,11 @@ public class Panel extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         BtnGrabar.setText("Grabar");
+        BtnGrabar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnGrabarActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Raza:");
 
@@ -247,6 +252,10 @@ public class Panel extends javax.swing.JFrame {
     private void CampoAtencionEspecialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CampoAtencionEspecialActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CampoAtencionEspecialActionPerformed
+
+    private void BtnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGrabarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnGrabarActionPerformed
 
     /**
      * @param args the command line arguments

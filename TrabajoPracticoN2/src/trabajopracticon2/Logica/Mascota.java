@@ -107,8 +107,4 @@ public class Mascota implements Serializable {
         this.observaciones = observaciones;
     }
     
-    
-    
-    
-    
 }
