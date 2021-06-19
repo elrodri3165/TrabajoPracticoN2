@@ -17,13 +17,13 @@ public class Mascota implements Serializable {
     private String nombre_perro;
     private String raza;
     private String Color;
-    private boolean alergico;
-    private boolean atencion_especial;
+    private String alergico;
+    private String atencion_especial;
     private String nombre_duenio;
     private String celular_duenio;
     private String observaciones;
 
-    public Mascota(int num_cliente, String nombre_perro, String raza, String Color, boolean alergico, boolean atencion_especial, String nombre_duenio, String celular_duenio, String observaciones) {
+    public Mascota(int num_cliente, String nombre_perro, String raza, String Color, String alergico, String atencion_especial, String nombre_duenio, String celular_duenio, String observaciones) {
         this.num_cliente = num_cliente;
         this.nombre_perro = nombre_perro;
         this.raza = raza;
@@ -51,11 +51,11 @@ public class Mascota implements Serializable {
         return Color;
     }
 
-    public boolean isAlergico() {
+    public String getAlergico() {
         return alergico;
     }
 
-    public boolean isAtencion_especial() {
+    public String getAtencion_especial() {
         return atencion_especial;
     }
 
@@ -87,11 +87,11 @@ public class Mascota implements Serializable {
         this.Color = Color;
     }
 
-    public void setAlergico(boolean alergico) {
+    public void setAlergico(String alergico) {
         this.alergico = alergico;
     }
 
-    public void setAtencion_especial(boolean atencion_especial) {
+    public void setAtencion_especial(String atencion_especial) {
         this.atencion_especial = atencion_especial;
     }
 
@@ -106,5 +106,8 @@ public class Mascota implements Serializable {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
+
+    
+
     
 }
