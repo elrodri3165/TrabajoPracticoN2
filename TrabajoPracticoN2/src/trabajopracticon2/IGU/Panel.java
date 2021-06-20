@@ -5,6 +5,7 @@
  */
 package trabajopracticon2.IGU;
 
+import Persistencia.ControladoraPersistencia;
 import trabajopracticon2.Logica.Mascota;
 
 /**
@@ -255,6 +256,9 @@ public class Panel extends javax.swing.JFrame {
                 CampoTelefono.getText(), 
                 CampoObservaciones.getText());
        
+        
+        ControladoraPersistencia control = new ControladoraPersistencia();
+        control.crearMascota(mascota);
     }//GEN-LAST:event_BtnGrabarActionPerformed
 
     /**
