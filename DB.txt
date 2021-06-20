@@ -1,0 +1,5 @@
+datebase: TrabajoPractico2
+url: localhost
+user: TP2
+password: TP2
+port 3306
