@@ -246,10 +246,15 @@ public class Panel extends javax.swing.JFrame {
 
     private void BtnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGrabarActionPerformed
         
-        Mascota mascota = new Mascota(Integer.parseInt(CampoCliente.getText()), CampoNombre.getText(),CampoRaza.getText(), CampoColor.getText(), CampoAlergico.getText(), CampoAtencionEspecial.getText(), CampoNombreDueño.getText(), CampoTelefono.getText(), CampoObservaciones.getText());
-        
-        
-  
+        Mascota mascota = new Mascota(Integer.parseInt(CampoCliente.getText()), 
+                CampoNombre.getText(),CampoRaza.getText(), 
+                CampoColor.getText(), 
+                CampoAlergico.getItemAt(CampoAlergico.getSelectedIndex()), 
+                CampoAtencionEspecial.getItemAt(CampoAtencionEspecial.getSelectedIndex()), 
+                CampoNombreDueño.getText(), 
+                CampoTelefono.getText(), 
+                CampoObservaciones.getText());
+       
     }//GEN-LAST:event_BtnGrabarActionPerformed
 
     /**
