@@ -7,6 +7,7 @@ package trabajopracticon2.IGU;
 
 import Persistencia.ControladoraPersistencia;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import trabajopracticon2.Logica.Mascota;
 
 /**
@@ -90,6 +91,11 @@ public class Panel extends javax.swing.JFrame {
                 CampoClienteActionPerformed(evt);
             }
         });
+        CampoCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                CampoClienteKeyTyped(evt);
+            }
+        });
 
         jLabel5.setText("Nombre del dueño:");
 
@@ -107,6 +113,12 @@ public class Panel extends javax.swing.JFrame {
         jLabel7.setText("Alergico:");
 
         jLabel8.setText("Cel. Dueño:");
+
+        CampoTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                CampoTelefonoKeyTyped(evt);
+            }
+        });
 
         jLabel1.setText("Cliente Nº");
 
@@ -227,7 +239,6 @@ public class Panel extends javax.swing.JFrame {
         CampoTelefono.setText(null);
     }
     
-    
     private void BtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimpiarActionPerformed
         LimpiarCampos();
     }//GEN-LAST:event_BtnLimpiarActionPerformed
@@ -263,6 +274,28 @@ public class Panel extends javax.swing.JFrame {
         LimpiarCampos();
          
     }//GEN-LAST:event_BtnGrabarActionPerformed
+
+    private void CampoClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CampoClienteKeyTyped
+        char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            
+            JOptionPane.showMessageDialog(rootPane, "Ingrese numeros por favor!");
+        }
+    }//GEN-LAST:event_CampoClienteKeyTyped
+
+    private void CampoTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CampoTelefonoKeyTyped
+         char validar = evt.getKeyChar();
+        
+        if (Character.isLetter(validar)){
+            getToolkit().beep();
+            evt.consume();
+            
+            JOptionPane.showMessageDialog(rootPane, "Ingrese numeros por favor!");
+        }
+    }//GEN-LAST:event_CampoTelefonoKeyTyped
 
     /**
      * @param args the command line arguments
