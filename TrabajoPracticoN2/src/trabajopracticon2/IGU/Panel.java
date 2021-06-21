@@ -6,6 +6,7 @@
 package trabajopracticon2.IGU;
 
 import Persistencia.ControladoraPersistencia;
+import javax.swing.JButton;
 import trabajopracticon2.Logica.Mascota;
 
 /**
@@ -92,11 +93,11 @@ public class Panel extends javax.swing.JFrame {
 
         jLabel5.setText("Nombre del dueño:");
 
-        CampoAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CampoAlergico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "Si", "No" }));
 
         jLabel6.setText("Atencion Especial:");
 
-        CampoAtencionEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CampoAtencionEspecial.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "SI", "No" }));
         CampoAtencionEspecial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CampoAtencionEspecialActionPerformed(evt);
@@ -259,6 +260,15 @@ public class Panel extends javax.swing.JFrame {
         
         ControladoraPersistencia control = new ControladoraPersistencia();
         control.crearMascota(mascota);
+        
+        CampoCliente.setText(null);
+        CampoColor.setText(null);
+        CampoNombre.setText(null);
+        CampoNombreDueño.setText(null);
+        CampoObservaciones.setText(null);
+        CampoRaza.setText(null);
+        CampoTelefono.setText(null);
+         
     }//GEN-LAST:event_BtnGrabarActionPerformed
 
     /**
