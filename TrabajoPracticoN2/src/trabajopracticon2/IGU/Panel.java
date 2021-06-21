@@ -216,8 +216,8 @@ public class Panel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimpiarActionPerformed
-
+    private void LimpiarCampos(){
+        //metodo para limpiar los campos
         CampoCliente.setText(null);
         CampoColor.setText(null);
         CampoNombre.setText(null);
@@ -225,7 +225,11 @@ public class Panel extends javax.swing.JFrame {
         CampoObservaciones.setText(null);
         CampoRaza.setText(null);
         CampoTelefono.setText(null);
-
+    }
+    
+    
+    private void BtnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLimpiarActionPerformed
+        LimpiarCampos();
     }//GEN-LAST:event_BtnLimpiarActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -241,7 +245,7 @@ public class Panel extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoAtencionEspecialActionPerformed
 
     private void BtnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGrabarActionPerformed
-        
+        //creo un objeto mascota
         Mascota mascota = new Mascota(Integer.parseInt(CampoCliente.getText()), 
                 CampoNombre.getText(),CampoRaza.getText(), 
                 CampoColor.getText(), 
@@ -251,17 +255,12 @@ public class Panel extends javax.swing.JFrame {
                 CampoTelefono.getText(), 
                 CampoObservaciones.getText());
        
-        
+        //creo un onjeto persistencia
         ControladoraPersistencia control = new ControladoraPersistencia();
+        //accedo al metodo crearMascota de ControladoraPersitencia con el objeto Mascota como parametro
         control.crearMascota(mascota);
-        
-        CampoCliente.setText(null);
-        CampoColor.setText(null);
-        CampoNombre.setText(null);
-        CampoNombreDueño.setText(null);
-        CampoObservaciones.setText(null);
-        CampoRaza.setText(null);
-        CampoTelefono.setText(null);
+        //limpio los campos despues de grabar.
+        LimpiarCampos();
          
     }//GEN-LAST:event_BtnGrabarActionPerformed
 
